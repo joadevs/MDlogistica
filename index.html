@@ -12,7 +12,7 @@
     body {
       margin: 0;
       font-family: 'Montserrat', sans-serif;
-background-color: #f8f8f8;
+      background-color: #f2f2f2;
       color: #c4c1c1;
     }
     nav {
@@ -31,7 +31,7 @@ background-color: #f8f8f8;
 
     .logo img {
   height: auto;
-  width: 130px;
+  width: 170px;
   object-fit: contain;
 }
 
@@ -168,18 +168,82 @@ background-color: #f8f8f8;
 .cta-button:hover {
   background-color: #b90f0d;
 }
-.cotizacion-box {
-    max-width: 600px;
-    margin: 50px auto;
-    padding: 20px 30px;
-    background-color: #1b1b18;
-    border-radius: 16px;
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    color: #fff;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-  }
+.cotizaciones-section {
+  background-color: #f2f2f2;
+  padding: 60px 20px;
+}
+
+.cotizaciones-contenedor {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.card-cotizacion {
+  background-color: #1b1b18;
+  color: #fff;
+  padding: 25px 30px;
+  border-radius: 12px;
+  text-align: center;
+  width: 250px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.card-cotizacion:hover {
+  transform: scale(1.05);
+}
+
+.card-cotizacion h3 {
+  font-size: 1.4rem;
+  color: red;
+  margin-bottom: 10px;
+}
+
+.card-cotizacion p {
+  font-size: 1.1rem;
+  margin: 5px 0;
+  color: #c4c1c1;
+}
+
+.card-cotizacion .fecha {
+  font-size: 0.9rem;
+  color: #7c7c7c;
+}
+
+
+.emoji-bandera {
+  width: 64px;
+  height: 64px;
+}
+
+.cotizacion-texto {
+  display: flex;
+  flex-direction: column;
+}
+
+.titulo {
+  font-size: 22px;
+  font-weight: bold;
+  color: #b80000;
+  margin-bottom: 5px;
+}
+
+.valor {
+  font-size: 20px;
+  font-weight: 600;
+  color: #c4c1c1;
+}
+
+.fecha {
+  font-size: 14px;
+  color: #7c7c7c;
+  margin-top: 5px;
+}
+
 
   .emoji-bandera {
     width: 64px;
@@ -194,14 +258,14 @@ background-color: #f8f8f8;
   .titulo {
     font-size: 22px;
     font-weight: bold;
-    color: #edd406;
+    color: #b90f0d;
     margin-bottom: 5px;
   }
 
   .valor {
     font-size: 20px;
     font-weight: 600;
-    color: #c4c1c1;
+    color: #1b1b18;
   }
 
   .fecha {
@@ -369,29 +433,10 @@ background-color: #f8f8f8;
   font-size: 1rem;
 }
 
-  .servicio-destacado {
-    background-image: url('img/WhatsApp\ Image\ 2025-04-11\ at\ 2.31.48\ PM.jpeg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    position: relative;
-    padding: 100px 20px;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    color: white;
-  }
-  
-  .servicio-destacado::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.6); /* oscurece imagen para que el texto resalte */
-  }
-  
   .contenido-servicio {
     position: relative;
     z-index: 1;
+    
     max-width: 600px;
     padding-left: 40px;
   }
@@ -432,7 +477,7 @@ background-color: #f8f8f8;
 }
 
     .video-section {
-      background-color: #f8f8f8;
+      background-color: #f2f2f2;
       padding: 60px 20px;
       text-align: center;
     }
@@ -444,7 +489,7 @@ background-color: #f8f8f8;
     }
  
     .sobre-nosotros {
-      background-color: #f8f8f8;
+      background-color: #1b1b18;
       padding: 60px 20px;
     }
   
@@ -470,7 +515,7 @@ background-color: #f8f8f8;
   
     .sobre-nosotros .texto p {
       font-size: 18px;
-      color: #444;
+      color: white;
       line-height: 1.6;
       margin-bottom: 15px;
     }
@@ -637,6 +682,48 @@ background-color: #f8f8f8;
     height: 300px;
   }
 }
+.carrusel {
+  position: relative;
+  overflow: hidden;
+  width: 75%;
+  background-color: #f8f8f8;
+
+  margin: 30px auto;
+}
+
+.carrusel-container {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.carrusel-container img {
+  width: 100%;
+  flex-shrink: 0;
+  object-fit: cover;
+  height: auto;
+}
+
+.carrusel-controles {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+  padding: 0 5px;
+}
+
+.carrusel-controles button {
+  background: rgba(0,0,0,0.5);
+  border: none;
+  color: #fff;
+  font-size: 1.5rem;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
 
 
 
@@ -670,15 +757,15 @@ background-color: #f8f8f8;
       </div>
       
   <nav>
-    <div class="logo"><img src="img/logo-Photoroom.png" alt=""></div>
+    <div class="logo"><img src="img/logo MD GRANDE (2)_pages-to-jpg-0001-Photoroom.png" alt=""></div>
     <div class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('active')">
       <span></span>
       <span></span>
       <span></span>
     </div>
     <div class="nav-links">
-      <a href="#inicio">Inicio</a>
-      <a href="#sobre-nosotros">Sobre Nosotros</a> 
+      <a href="">Inicio</a>
+      <a href="sobre-nosotros.html">Sobre Nosotros</a> 
       <a href="#servicios">Transporte de Cargas</a>
       <a href="#servicios">Depósito Logístico</a>
 
@@ -695,16 +782,14 @@ background-color: #f8f8f8;
       </p>
     </div>
   </section>
+<br><br><br>
+  <section class="cotizaciones" id="cotizaciones">
 
-  <div class="cotizacion-box">
-    <img src="flags/usa.png" alt="Bandera USA" class="emoji-bandera">
-    <div class="cotizacion-texto">
-      <div class="titulo">Cotización del Dólar Oficial los 3 mas</div>
-      <div id="valor-dolar" class="valor">Cargando...</div>
-      <div id="fecha-dolar" class="fecha"></div>
+    <div class="cotizaciones-contenedor">
+      <!-- Las cotizaciones se cargarán dinámicamente aquí -->
     </div>
-  </div>
-</section>
+  </section>
+  <br><br>
   <!-- SOBRE NOSOTROS -->
 <section class="sobre-nosotros" id="sobre-nosotros">
     <div class="contenido">
@@ -715,38 +800,30 @@ background-color: #f8f8f8;
           Operamos en Argentina, Brasil, Uruguay, Paraguay, Chile y Bolivia, 
           ofreciendo soluciones confiables y eficientes para cargas completas y consolidadas.
         </p>
-        <p>
-          Contamos con depósito propio en Uruguayana para almacenaje a bajo costo y 
-          atención personalizada a nuestros clientes.
-        </p>
-      </div>
+        <br>
+        <a href="sobre-nosotros.html" class="cta-button">Mas Info</a>
+        </div>
       <div class="imagen">
         <img src="img/WhatsApp Image 2025-04-11 at 2.31.47 PM.jpeg" alt="Camión logístico">
       </div>
-    </div> carga seca, carga imo (quimica), carga completa/parcial 
+    </div>  
   </section>
-  <section class="video-section">
-    <div class="video-contenedor">
-      <video controls>
-        <source src="img/md-logistica.mp4" type="video/mp4">
-        Tu navegador no soporta videos HTML5.
-      </video>
-    </div>
-  </section>
+ 
   
-  <section class="servicio-destacado" id="servicios">
-    <div class="contenido-servicio">
-      <div class="texto">
-        <h2>Soluciones en Logística Internacional</h2>
-        <p>
-          Transporte terrestre internacional entre Argentina, Brasil, Uruguay, Paraguay, Chile y Bolivia. 
-          <br><br>
-          Cargas completas y consolidadas, con depósito económico en Uruguayana. 
-          <br><br>
-          Confiá en MD Logística S.R.L para mover tu carga con eficiencia y seguridad.
-        </p>
+  <section class="servicio-destacado" id="servicios" >
+    <section class="carrusel">
+      <div class="carrusel-container" id="carrusel">
+        <img src="img/WhatsApp Image 2025-04-16 at 3.59.11 PM (1).jpeg" alt="Camión 1">
+        <img src="img/WhatsApp Image 2025-04-16 at 4.16.13 PM (1).jpeg" alt="Camión 2">
+        <img src="img/WhatsApp Image 2025-04-16 at 4.16.13 PM.jpeg" alt="Camión 3">
+      <img src="img/WhatsApp Image 2025-04-16 at 4.16.17 PM.jpeg" alt="">
       </div>
-    </div>
+      <div class="carrusel-controles">
+        <button onclick="moverCarrusel(-1)">⟨</button>
+        <button onclick="moverCarrusel(1)">⟩</button>
+      </div>
+    </section>
+    
   </section>
   <div class="beneficios">
     <div class="beneficio">
@@ -762,18 +839,121 @@ background-color: #f8f8f8;
       <p>Operamos en 6 países de Sudamérica.</p>
     </div>
   </div>
+  <section class="transporte-animado">
+    <div class="transporte-img">
+      <img src="img/WhatsApp Image 2025-04-21 at 12.39.23 PM.jpeg" alt="Camión de carga">
+    </div>
+    <div class="transporte-texto">
+      <h2>Transporte de Carga</h2>
+      <p>
+        Ofrecemos servicios de carga terrestre internacional: carga seca, carga IMO, completa y parcial. Seguridad, seguimiento y cobertura en todo el Mercosur.
+      </p>
+      <a href="#contacto" class="btn-transporte">Solicitar Cotización</a>
+    </div>
+  </section>
+  <style>
+    .transporte-animado {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 20px;
+  gap: 40px;
+  flex-wrap: wrap;
+  background-color: #1b1b18;
+}
+
+.transporte-img img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 12px;
+  opacity: 0;
+  transform: translateX(-50px);
+  animation: fadeSlideIn 1s ease-out forwards;
+}
+
+.transporte-texto {
+  max-width: 500px;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp 1s ease-out forwards;
+  animation-delay: 0.5s;
+}
+
+.transporte-texto h2 {
+  font-size: 2.5rem;
+  color: #e3110e;
+  margin-bottom: 20px;
+}
+
+.transporte-texto p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.btn-transporte {
+  display: inline-block;
+  background-color: #e3110e;
+  color: white;
+  padding: 12px 25px;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.btn-transporte:hover {
+  background-color: #b90f0d;
+}
+
+/* ANIMACIONES */
+@keyframes fadeSlideIn {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .transporte-animado {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .transporte-texto h2 {
+    font-size: 2rem;
+  }
+}
+
+  </style>
   <section class="seccion-mapa">
     <div class="mapa-contenedor">
       <div class="texto-mapa">
         <h2>Depósito en Uruguayana</h2>
         <p>Contamos con un depósito propio para almacenaje de mercaderías diversas a muy bajo costo. Una ubicación estratégica para facilitar el transporte internacional.</p>
       </div>
-      <div class="mapa-iframe">
+      <div class="mapa-iframe" >
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1721.9326517641496!2d-57.04268382793421!3d-29.776847497570728!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94535b1198855751%3A0xb6acfd05a73c5d26!2sTRANS%20FALLS%20LTDA%20Uruguaiana!5e1!3m2!1ses!2sar!4v1744814709723!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
     </div>
   </section>
-  
+  <section class="video-section" >
+    <div class="video-contenedor">
+      <video controls>
+        <source src="img/md-logistica.mp4" type="video/mp4">
+        Tu navegador no soporta videos HTML5.
+      </video>
+    </div>
+  </section>
   <section class="contacto" id="contacto">
     <h2>Contacto</h2>
     <p>Estamos disponibles para ayudarte. Escribinos por redes o completá el formulario.</p>
@@ -797,6 +977,7 @@ background-color: #f8f8f8;
       <button type="submit">Enviar</button>
     </form>
   </section>
+  
   <footer class="footer-largo">
     <div class="footer-contenedor">
       
@@ -851,27 +1032,56 @@ background-color: #f8f8f8;
 <a href="https://wa.me/3772456852" class="boton-flotante" target="_blank">
     <img src="img/wsp.jpg" alt="WhatsApp">
   </a>
+  <script>
+    async function cargarCotizaciones() {
+      const contenedor = document.querySelector('.cotizaciones-contenedor');
   
-    
-<script>
-   document.addEventListener('DOMContentLoaded', () => {
-    const valorDolar = document.getElementById('valor-dolar');
-    const fechaDolar = document.getElementById('fecha-dolar');
+      try {
+        const response = await fetch('https://dolarapi.com/v1/dolares');
+        const data = await response.json();
+  
+        const tipos = ['oficial', 'blue', 'bolsa', 'contadoconliqui'];
+const nombres = {
+  oficial: 'Dólar Oficial',
+  blue: 'Dólar Blue',
+  bolsa: 'Dólar MEP',
+  contadoconliqui: 'Dólar CCL'
+};
 
-    fetch('https://dolarapi.com/v1/dolares/oficial')
-      .then(response => response.json())
-      .then(data => {
-        valorDolar.innerText = `Compra: $${data.compra} | Venta: $${data.venta}`;
-        const fecha = new Date(data.fechaActualizacion).toLocaleString();
-        fechaDolar.innerText = `Actualizado: ${fecha}`;
-      })
-      .catch(error => {
-        console.error('Error al obtener la cotización:', error);
-        valorDolar.innerText = 'No se pudo cargar la cotización.';
-      });
-  });
- 
-</script>
+  
+        tipos.forEach(tipo => {
+          const cotizacion = data.find(d => d.casa === tipo);
+          if (cotizacion) {
+            const div = document.createElement('div');
+            div.className = 'cotizacion-box';
+            div.innerHTML = `
+              <div class="cotizacion-texto">
+                <div class="titulo">${nombres[tipo]}</div>
+                <div class="valor">Compra: $${cotizacion.compra} | Venta: $${cotizacion.venta}</div>
+                <div class="fecha">Actualizado: ${new Date(cotizacion.fechaActualizacion).toLocaleDateString()}</div>
+              </div>
+            `;
+            contenedor.appendChild(div);
+          }
+        });
+  
+      } catch (error) {
+        console.error('Error al cargar cotizaciones:', error);
+        contenedor.innerHTML = `<p>No se pudieron cargar las cotizaciones.</p>`;
+      }
+    }
+  
+    cargarCotizaciones();
+    let index = 0;
+
+function moverCarrusel(direccion) {
+  const carrusel = document.getElementById('carrusel');
+  const totalSlides = carrusel.children.length;
+  index = (index + direccion + totalSlides) % totalSlides;
+  carrusel.style.transform = `translateX(-${index * 100}%)`;
+}
+  </script>
+  
   
 
   
