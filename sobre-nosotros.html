@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Nosotros | MD Logística</title>
+    <link rel="shortcut icon" href="img/logo-Photoroom.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+          body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      background-color: #f2f2f2;
+      color: #c4c1c1;
+    }
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+    }
+    .logo {
+  display: flex;
+  align-items: center;
+}
+
+    .logo img {
+  height: auto;
+  width: 170px;
+  object-fit: contain;
+}
+
+    .nav-links {
+      display: flex;
+      gap: 20px;
+    }
+    .nav-links a {
+      color:  #e3110e ;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .nav-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+    .nav-toggle span {
+      background: #edd406;
+      height: 3px;
+      margin: 4px 0;
+      width: 25px;
+      display: block;
+    }
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background-color: #1b1b18;
+        flex-direction: column;
+        width: 200px;
+        border: 1px solid #44403d;
+        border-radius: 8px;
+        padding: 10px;
+      }
+      .nav-links.active {
+        display: flex;
+      }
+      .nav-toggle {
+        display: flex;
+      }
+    }
+    .contact-bar {
+  width: auto;
+  background-color: #e3110e;
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  padding: 10px 20px;
+  flex-wrap: wrap;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: white;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.contact-item a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.contact-item a:hover {
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 768px) {
+  .contact-bar {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+}
+/* FOOTER responsive */
+@media (max-width: 768px) {
+  .footer-contenedor {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 30px;
+  }
+
+  .footer-columna {
+    flex: 1 1 100%;
+  }
+
+  .footer-redes a img {
+    margin-right: 15px;
+  }
+}
+ 
+
+.footer-largo {
+  background-color: #1b1b18;
+  color: #c4c1c1;
+  padding: 60px 20px 30px;
+  font-family: sans-serif;
+}
+
+.footer-contenedor {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-columna {
+  flex: 1 1 220px;
+}
+
+.footer-columna h3,
+.footer-columna h4 {
+  color: #edd406;
+  margin-bottom: 15px;
+}
+
+.footer-columna ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-columna ul li {
+  margin-bottom: 10px;
+}
+
+.footer-columna a {
+  color: #c4c1c1;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-columna a:hover {
+  color: #edd406;
+}
+
+.footer-redes a img {
+  width: 30px;
+  margin-right: 10px;
+  transition: transform 0.3s ease;
+}
+
+
+.footer-copy {
+  text-align: center;
+  padding-top: 20px;
+  border-top: 1px solid #44403d;
+  margin-top: 40px;
+  font-size: 0.9rem;
+  color: #7c7c7c;
+}
+
+.hero {
+  background-image: url('img/WhatsApp\ Image\ 2025-04-11\ at\ 2.31.49\ PM.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  color: white;
+  text-align: center;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(27, 27, 24, 0.6); /* filtro oscuro con color de tu paleta */
+  z-index: 1;
+}
+
+.hero-content {
+  z-index: 2;
+  max-width: 700px;
+  padding: 20px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: #edd406;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  color: #ffffff;
+}
+
+.sobre-nosotros {
+      background-color: #f2f2f2;
+      padding: 60px 20px;
+    }
+  
+    .sobre-nosotros .contenido {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 1200px;
+      margin: 0 auto;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+  
+    .sobre-nosotros .texto {
+      flex: 1 1 500px;
+    }
+  
+    .sobre-nosotros .texto h2 {
+      font-size: 32px;
+      margin-bottom: 20px;
+      color: #e3110e;
+    }
+  
+    .sobre-nosotros .texto p {
+      font-size: 18px;
+      color: #44403d;
+      line-height: 1.6;
+      margin-bottom: 15px;
+    }
+  
+    .sobre-nosotros .imagen {
+      flex: 1 1 400px;
+      text-align: center;
+    }
+  
+    .sobre-nosotros .imagen img {
+      width: 100%;
+      max-width: 500px;
+      border-radius: 10% 30% 50% 70%;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    .cta-button {
+  padding: 12px 25px;
+  background-color: #e3110e;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.cta-button:hover {
+  background-color: #b90f0d;
+}
+.mision-vision {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  padding: 20px 20px;
+  background-color: #f2f2f2;
+}
+
+.mision-vision .bloque {
+ 
+  color: #fff;
+  padding: 40px 30px;
+  border-radius: 12px;
+  max-width: 500px;
+  flex: 1 1 400px;
+}
+
+
+.mision-vision h2 {
+  color: #b90f0d;
+  font-size: 2rem;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.mision-vision p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #44403d;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .mision-vision {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+ 
+.boton-flotante {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  transition: transform 0.3s ease;
+}
+
+.boton-flotante:hover {
+  transform: scale(1.1);
+}
+
+.boton-flotante img {
+  width: 60px;
+  border-radius: 50%;
+
+  height: 60px;
+}
+    </style>
+</head>
+<body>
+    <div class="contact-bar">
+        <div class="contact-item">
+          <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="white">
+            <path d="M280-40q-33 0-56.5-23.5T200-120v-720q0-33 23.5-56.5T280-920h400q33 0 56.5 23.5T760-840v720q0 33-23.5 56.5T680-40H280Zm0-120v40h400v-40H280Zm0-80h400v-480H280v480Zm0-560h400v-40H280v40Z"/>
+          </svg>
+          <a href="tel:3772456852">3772 456852</a>
+        </div>
+      
+        <div class="contact-item">
+          <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="white">
+            <path d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm320-280L160-640v400h640v-400L480-440Zm0-80 320-200H160l320 200Z"/>
+          </svg>
+          <a href="mailto:dario@mdlogistica.com">dario@mdlogistica.com</a>
+          /
+          <a href="mailto:dario@mdlogistica.com">info@mdlogistica.com</a>
+
+        </div>
+      
+        <div class="contact-item">
+          <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="white">
+            <path d="m612-292 56-56-148-148v-184h-80v216l172 172ZM480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Z"/>
+          </svg>
+          <span>Horario: Lun a Vie de 9 a 18 hs</span>
+        </div>
+      </div>
+      
+  <nav>
+    <div class="logo"><img src="img/logo MD GRANDE (2)_pages-to-jpg-0001-Photoroom.png" alt=""></div>
+    <div class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('active')">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <div class="nav-links">
+      <a href="index.html">Inicio</a>
+      <a href="">Sobre Nosotros</a> 
+      <a href="#servicios">Transporte de Cargas</a>
+      <a href="#servicios">Depósito Logístico</a>
+
+      <a href="#servicios">Servicios</a>
+      <a href="#contacto">Contacto</a>
+    </div>
+  </nav>
+  <section class="hero" id="inicio">
+    <div class="hero-content">
+      <h1>Sobre Nosotros</h1>
+      <p>Comprometidos con la logística del Mercosur</p>
+    </div>
+  </section>
+
+  <!-- SOBRE NOSOTROS -->
+  <section class="sobre-nosotros">
+    <div class="contenido">
+      <div class="texto">
+        <h2>Quiénes somos</h2>
+        <p style="color: red; font-weight: bold;">_______________________________</p>
+        <p>
+          Somos una empresa especializada en transporte internacional terrestre. 
+          Operamos en Argentina, Brasil, Uruguay, Paraguay, Chile y Bolivia, 
+          ofreciendo soluciones confiables y eficientes para cargas completas y consolidadas.
+        </p>
+        <br>
+        </div>
+      <div class="imagen">
+        <img src="img/WhatsApp Image 2025-04-16 at 4.16.17 PM.jpeg" alt="Camión logístico">
+      </div>
+    </div>  
+  </section>
+ 
+  <section class="mision-vision">
+    <div class="bloque">
+      <h2>Misión</h2>
+      <p>
+        Ofrecer un servicio logístico internacional de excelencia, garantizando el traslado seguro y eficiente de cargas a través del Mercosur, con foco en la atención personalizada, el cumplimiento y la mejora continua.      </p>
+    </div>
+  
+    <div class="bloque">
+      <h2>Visión</h2>
+      <p>
+        Consolidarnos como una de las principales empresas de transporte terrestre internacional en la región, siendo reconocidos por nuestra confiabilidad, compromiso operativo y soluciones adaptadas a cada cliente.      </p>
+    </div>
+  </section>
+  <h2 style="text-align: center; color: black;">Anotación por Joaquin: Testimonios de empresas </h2>
+  <br><br><br>
+  <a href="https://wa.me/3772456852" class="boton-flotante" target="_blank">
+    <img src="img/wsp.jpg" alt="WhatsApp">
+  </a>
+  <footer class="footer-largo">
+    <div class="footer-contenedor">
+      
+      <!-- Columna 1: Descripción -->
+      <div class="footer-columna">
+        <h3>MD Logística</h3>
+        <p>Somos una empresa dedicada al transporte terrestre internacional de cargas completas. </p>
+      </div>
+  
+      <!-- Columna 2: Navegación -->
+      <div class="footer-columna">
+        <h4>Navegación</h4>
+        <ul>
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#servicios">Servicios</a></li>
+          <li><a href="#sobre-nosotros">Sobre Nosotros</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </div>
+  
+      <!-- Columna 3: Contacto -->
+      <div class="footer-columna">
+        <h4>Contacto</h4>
+        <p><strong>📞 Tel:</strong> <a href="tel:+543772456852">3772 456852</a></p>
+        <p><strong>✉️ Email:</strong> <a href="mailto:dario@mdlogistica.com">dario@mdlogistica.com</a></p>
+        <p><strong>📍 Ubicación:</strong> Paso de los Libres, Argentina</p>
+      </div>
+  
+      <!-- Columna 4: Redes Sociales -->
+      <div class="footer-columna">
+        <h4>Seguinos</h4>
+        <div class="footer-redes">
+            <a href="https://www.instagram.com/mdlogistica/" target="_blank">
+                <img src="svg/instagram-1-svgrepo-com.svg" alt="Instagram">
+              </a>
+              <a href="https://www.facebook.com/md.logistica/" target="_blank">
+                <img src="svg/facebook-color-svgrepo-com.svg" alt="Facebook">
+              </a>
+              <a href="https://wa.me/3772456852" target="_blank">
+                <img src="svg/whatsapp-icon-logo-svgrepo-com (1).svg" alt="WhatsApp">
+              </a>
+        </div>
+      </div>
+    </div>
+  
+    <div class="footer-copy">
+      <p>&copy; 2025 MD Logística S.R.L. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+  
+</body>
+</html>
