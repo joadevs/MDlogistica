@@ -16,7 +16,7 @@
     }
    
       
-   /* Estilos generales para el hero */
+/* Estilos generales para el hero */
 .hero {
   background-image: url('img/ChatGPT Image 7 may 2025, 01_50_24 p.m..png');
   background-size: cover;
@@ -29,26 +29,31 @@
   position: relative;
   color: white;
   text-align: center;
-  padding: 0 20px; /* Agregado para darle espacio al contenido en pantallas pequeñas */
+  overflow-x: hidden; /* Evitar el scroll horizontal */
+  width: 100%; /* Asegurar que ocupa todo el ancho de la pantalla */
+  position: fixed; /* Fijar el fondo */
+  top: 0;
+  left: 0;
+  z-index: -1; /* Asegura que el fondo quede por debajo del contenido */
 }
 
-/* Responsive */
+/* Responsivo */
 @media (max-width: 768px) {
   .hero {
-    background-position: center top; /* Cambiar el enfoque de la imagen */
+    background-position: center top;
     background-size: cover;
-    height: 80vh; /* Ajustar la altura en pantallas pequeñas */
+    height: 80vh;
   }
 }
 
 @media (max-width: 480px) {
   .hero {
-    background-position: center top; /* Centrado de la imagen */
+    background-position: center top;
     background-size: cover;
-    height: 60vh; /* Ajustar la altura aún más */
-    padding: 0 10px; /* Menos espacio lateral en pantallas muy pequeñas */
+    height: 60vh;
   }
 }
+
 
 
 
