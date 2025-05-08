@@ -553,7 +553,68 @@ margin-left: -70px;
   margin-bottom: 10px;
   font-size: 0.95rem;
 }
+ 
 
+.footer-largo {
+  background-color: #1b1b18;
+  color: #c4c1c1;
+  padding: 60px 20px 30px;
+  font-family: sans-serif;
+}
+
+.footer-contenedor {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-columna {
+  flex: 1 1 220px;
+}
+
+.footer-columna h3,
+.footer-columna h4 {
+  color: #e76d1f;
+  margin-bottom: 15px;
+}
+
+.footer-columna ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-columna ul li {
+  margin-bottom: 10px;
+}
+
+.footer-columna a {
+  color: #c4c1c1;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-columna a:hover {
+  color: #e76d1f;
+}
+
+.footer-redes a img {
+  width: 30px;
+  margin-right: 10px;
+  transition: transform 0.3s ease;
+}
+
+
+.footer-copy {
+  text-align: center;
+  padding-top: 20px;
+  border-top: 1px solid #44403d;
+  margin-top: 40px;
+  font-size: 0.9rem;
+  color: #7c7c7c;
+}
   </style>
 </head>
 <body>
@@ -716,24 +777,82 @@ margin-left: -70px;
       <p>Edif. Hech Of. 14</p>
       <p>Paso de los Libres</p>
       <p>Corrientes. Argentina</p>
-      <p>Tel.: 03772-425116</p>
+      <p> Tel.:
+        <a href="tel:03772-425116">
+        03772-425116</p>
+      </a>
     </div>
     <div class="valor-box">
       <h4>Oficina Administrativa</h4>
       <p>Italia 376 Piso 3A</p>
       <p>Lomas de Zamora</p>
       <p>Buenos Aires. Argentina</p>
-      <p>Tel.:011-42835058</p>
+      <p> Tel.: <a href="tel:011-42835058">
+       011-42835058</p></a>
     </div>
     <div class="valor-box">
       <h4>Atención Comercial</h4>
       <p>Director:</p>
       <p>Darío Molo</p>
-      <p>Email:</p>
-      <p>Cel.:+549 377245 6852</p>
+      <p>Email: <br>
+        <a href="mailto:dario@mdlogistica.com">dario@mdlogistica.com</a>
+      </p>
+      
+      <p>    Cel.:<a href="tel:+549 377245 6852">
+     +549 377245 6852</p></a>
     </div>
   </div>
 </section>
+<footer class="footer-largo">
+  <div class="footer-contenedor">
+    
+    <!-- Columna 1: Descripción -->
+    <div class="footer-columna">
+      <h3>MD Logística</h3>
+      <p>Somos una empresa dedicada al transporte terrestre internacional de cargas completas. </p>
+    </div>
+
+    <!-- Columna 2: Navegación -->
+    <div class="footer-columna">
+      <h4>Navegación</h4>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="sobre-nosotros.html">Sobre Nosotros</a></li>
+        <li><a href="transporte-de-carga.html">Transporte de Cargas</a></li>
+        <li><a href="deposito-logistico.html">Depósito Logístico</a></li>
+        <li><a href="servicios.html">Servicios</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </div>
+
+    <!-- Columna 3: Contacto -->
+    <div class="footer-columna">
+      <h4>Contacto</h4>
+      <p><strong>📞 Tel:</strong> <a href="tel:+543772456852">3772 456852</a></p>
+      <p><strong>✉️ Email:</strong> <a href="mailto:dario@mdlogistica.com">dario@mdlogistica.com</a></p>
+      <p><strong>📍 Ubicación:</strong> Paso de los Libres, Argentina</p>
+    </div>
+
+    <!-- Columna 4: Redes Sociales -->
+    <div class="footer-columna">
+      <h4>Seguinos</h4>
+      <div class="footer-redes">
+          <a href="https://www.instagram.com/mdlogistica/" target="_blank">
+              <img src="svg/instagram-1-svgrepo-com.svg" alt="Instagram">
+            </a>
+           
+            <a href="https://wa.me/3772456852" target="_blank">
+              <img src="svg/whatsapp-icon-logo-svgrepo-com (1).svg" alt="WhatsApp">
+            </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-copy">
+    <p>&copy; 2025 MD Logística S.R.L. Todos los derechos reservados.</p>
+  </div>
+</footer>
+
   <script>
     const menuToggle = document.getElementById('menu-toggle');
 const menu = document.querySelector('.navbar ul');
